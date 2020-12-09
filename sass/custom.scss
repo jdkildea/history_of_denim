@@ -1,9 +1,14 @@
 html{
-   scroll-behavior: smooth; 
+    scroll-behavior: smooth; 
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 $leftgrad: #FBB03B;
 $rightgrad: #FEEC68;
+$accent: #B53E25;
+$accentdark: #4F140A;
 
 body {
     background-color: #FFF8B6;
@@ -99,10 +104,17 @@ ul.navbar-nav li.dropdown:hover .myddmenu {
 .erasnav a:hover {
     transition: .3s ease-in-out;
     text-decoration: none;
+    filter: brightness(.4);
+    font-size: 16px;
 }
 
 .tlcontent {
     max-width: 1000px;
+}
+
+.spacercol {
+    max-width: 1px;
+    margin: 0px 100px;
 }
 
   /* Timeline holder */
@@ -137,7 +149,7 @@ ul.timeline:before {
 
 li.timeline-item {
     margin: 20px 0px;
-    padding: 75px 0px 0px;
+    padding: 1.5rem;
 }
 
 /* Timeline item arrow */
@@ -147,7 +159,7 @@ li.timeline-item {
     border-bottom: 0.5rem solid transparent;
     display: block;
     position: absolute;
-    left: 2rem;
+    left: -.5rem;
 }
 
 /* Timeline item circle marker */
@@ -158,11 +170,27 @@ li.timeline-item::before {
     position: absolute;
     border-radius: 50%;
     border: 3px solid #fff;
-    left: 11px;
+    left: -29px;
     width: 14px;
     height: 14px;
     z-index: 2;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.explore {
+    position: static !important;
+    width:100%;
+    text-align: right;
+
+    transition: .3s ease-in-out;
+    color: $accent;
+
+    &:hover {
+        color: $accentdark;
+        transition: .3s ease-in-out;
+        text-decoration: none;
+        
+    }
 }
 
 // end eras styling ------>
