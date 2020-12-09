@@ -19,11 +19,27 @@ body {
     z-index: 6;
 }
 
+ul.navbar-nav li.dropdown:hover .myddmenu {
+    display: block;
+}
+
+.mydropdown {
+    // width: 160px;
+}
+
+.myddmenu {
+    border: none;
+    background-color: #F8F9FA;
+}
+
+.myddmenu a:hover {
+    background-color: #ddd;
+}
+
 .navblur::after{
     content: "";
     width: 100vw;
     height: 75px;
-    // border: 5px solid #000;
     filter: blur(30px);
     position: fixed;
     display: block;
@@ -33,6 +49,7 @@ body {
 
 .mycarousel {
     height: 90vh;
+    padding: 7vh 0;
 }
 
 .mycarousel img {
@@ -61,18 +78,16 @@ body {
     color: #fff;
     margin: 5vh;
     padding: none !important;
-    // min-width: 100px;
 }
 
 .erasnav ul {
-    padding: 0px;
+    padding: 25px 0px;
 }
 
 .erasnav li {
     box-shadow: 2px;
     list-style-type: none;
     height: 10vh;
-    // width: 60px;
     font-size: .85rem;
 }
 
@@ -95,6 +110,7 @@ ul.timeline {
     list-style-type: none;
     position: relative;
     padding-left: 1.5rem;
+    margin-top: 50px
 }
 
  /* Timeline vertical line */

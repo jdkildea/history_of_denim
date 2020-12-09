@@ -28,8 +28,17 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Eras<span class="sr-only">(current)</span></a>
+                <li class="nav-item dropdown mydropdown">
+                    <a class="nav-link" href="eras.html" role="button" aria-haspopup="true" aria-expanded="false">Eras<span class="sr-only">(current)</span></a>
+                    <div class="dropdown-menu myddmenu">
+                        <a class="dropdown-item" href="#origins">Origins</a>
+                        <a class="dropdown-item" href="#earlydecades">Early Decades</a>
+                        <a class="dropdown-item" href="#1970s">1970's</a>
+                        <a class="dropdown-item" href="#1980s">1980's</a>
+                        <a class="dropdown-item" href="#1990s">1990's</a>
+                        <a class="dropdown-item" href="#present">Present</a>
+                        <a class="dropdown-item" href="#production">Production</a>
+                        <a class="dropdown-item" href="#otheruses">Other Uses</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
@@ -38,7 +47,8 @@
                 </ul>
             </div>
         </nav>
-        <span class="navblur"></span>
+
+        <span class="navblur"></span> <!-- adds blur behind navigation -->
         
         <div class="row myrow">
             <div class="col-2 mx-2 erasnav">
@@ -59,8 +69,9 @@
             <div class="col-9 mx-2 tlcontent">
                 
                 <!-- Timeline -->
+                <span id="origins" class="spacer"></span>
                 <ul class="timeline">
-                    <span id="origins" class="spacer"></span>
+                    
                     <li  class="timeline-item bg-white rounded ml-3 p-4 shadow">
                         <div class="timeline-arrow"></div>
                         <h2 class="h5 mb-0">Origins</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
