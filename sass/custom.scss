@@ -95,6 +95,7 @@ ul.navbar-nav li.dropdown:hover .myddmenu {
     list-style-type: none;
     height: 10vh;
     font-size: .85rem;
+    display: block;
 }
 
 .erasnav a {
@@ -178,6 +179,7 @@ li.timeline-item::before {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+//explore link
 .explore {
     position: static !important;
     width:100%;
@@ -207,13 +209,19 @@ li.timeline-item::before {
 
 // start explore_pages ---------->
 
+.explore-title {
+    line-height: 100px;
+    margin: 20px auto 0px;
+
+}
+
 .box-accent {
     width: 300px;
     height: auto;
     background-color: #F8F9FA;
     box-shadow: $myshadow;
     padding: 1rem;
-
+    margin-top: 20px;
 
     &::after {
         content: "";
@@ -221,8 +229,8 @@ li.timeline-item::before {
         background-color: $accent;
         position: absolute;
         left: -10px;
-        top: -20px;
-        height: 100%;
+        top: -5px;
+        height: 95%;
         width: 300px;
         box-shadow: $myshadow;
         margin: auto;   
@@ -233,5 +241,87 @@ li.timeline-item::before {
     width: 90%
 }
 
+.explore-imgs {
+    width: 100%;
+    height: 70vh;
+    padding: 0 1rem;
+}
+
+.explore-imgs img {
+    width: 50vw;
+    max-width: 400px;
+    height: auto;
+    position: absolute;
+    box-shadow: $myshadow;
+
+    &:nth-child(1) {
+        z-index:2;
+
+        &::before {
+            // content: ' ';
+            // width: 20px;
+            // height: 20px;
+            // border-radius: 50%;
+            // position: absolute;
+            // top: 20%;
+            // right: 20%;
+            // border: 5px solid $accent;
+            // z-index: 5;
+            // background: #ddd;
+            // display: inline-block;
+            content: ' ';
+            background: #ddd;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            left: 100px;
+            width: 14px;
+            height: 14px;
+            z-index: 5;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &:nth-child(2) {
+        z-index:3;
+        left: 15vw;
+        top: 100px;
+
+        &::before {
+            // content: ' ';
+            // width: 20px;
+            // height: 20px;
+            // border-radius: 50%;
+            // position: absolute;
+            // top: 20%;
+            // right: 20%;
+            // border: 5px solid $accent;
+            // z-index: 5;
+            // background: #ddd;
+            // display: inline-block;
+            content: ' ';
+            background: #ddd;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            left: 100px;
+            width: 14px;
+            height: 14px;
+            z-index: 5;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &:nth-child(3) {
+        right: 10vw;
+        top: 50px;
+    }
+}
+
+.png-noshadow {
+    box-shadow: none !important;
+}
 
 // end explore_pages ---------->
