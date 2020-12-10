@@ -9,6 +9,7 @@ $leftgrad: #FBB03B;
 $rightgrad: #FEEC68;
 $accent: #B53E25;
 $accentdark: #4F140A;
+$myshadow: -3px 3px 5px rgba(0, 0, 0, 0.2);
 
 body {
     background-color: #FFF8B6;
@@ -70,7 +71,7 @@ ul.navbar-nav li.dropdown:hover .myddmenu {
 
 .myrow {
     margin: 0px !important;
-    padding: 60px 0px 0px 0px;
+    padding: 70px 0px 0px 0px;
 }
 
 // start eras styling ------->
@@ -203,3 +204,34 @@ li.timeline-item::before {
     margin: 50px 0px;
     padding: 50px
 }
+
+// start explore_pages ---------->
+
+.box-accent {
+    width: 300px;
+    height: auto;
+    background-color: #F8F9FA;
+    box-shadow: $myshadow;
+    padding: 1rem;
+
+
+    &::after {
+        content: "";
+        z-index: -1;
+        background-color: $accent;
+        position: absolute;
+        left: -10px;
+        top: -20px;
+        height: 100%;
+        width: 300px;
+        box-shadow: $myshadow;
+        margin: auto;   
+    }
+}
+
+.more-resources {
+    width: 90%
+}
+
+
+// end explore_pages ---------->
