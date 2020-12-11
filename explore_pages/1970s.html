@@ -20,7 +20,7 @@
 
 	<body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light mynavbar">
-                <a href="../eras.html" class="back-to-eras">&#171; Back to Eras</a>
+                <a href="../eras.html" class="back-to-eras">&#171; Back to Eras</a> 
                 <a class="navbar-brand" href="../index.html">History of Denim</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,10 +57,11 @@
         <div class="row myrow">
             <h1 class="explore-title">The 1970's</h1>
         </div>
+        <div id="svgContainer"></div>
         <div class="row explore-row">
             <div class="col-lg-8">
                 <div class="explore-imgs">
-                    <span>
+                    <span id="img1">
                         <img src="../images/bell-bottom-boots.jpg">
                     </span>
                     <span class="png-noshadow">
@@ -73,7 +74,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="info-container mx-auto pl-2">
-                    <div class="box-accent">
+                    <div id="info1" class="box-accent">
                         <h3 class="text-center">Title Here</h3>
                         <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula.... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....
                         </p>
@@ -87,7 +88,16 @@
 
 		<!-- jQuery and Bootstrap links - do not delete! -->
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<!-- end of do not delete -->
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/jquery.html-svg-connect.js"></script>
+        <!-- end of do not delete -->
+        
+        <script>
+        $("#svgContainer").HTMLSVGconnect({
+            paths: [
+                { start: "#img1", end: "#info1"}
+            ]
+        });
+        </script>
 	</body>
 </html>
