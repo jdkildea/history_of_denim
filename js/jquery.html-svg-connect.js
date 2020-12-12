@@ -12,7 +12,7 @@
     defaults = {
       stroke: "#B53E25",
       strokeWidth: 5,
-      orientation: "auto",
+      orientation: "horizontal",
       class: "connecting-line",
       // Array of objects with properties "start" & "end" that define the selectors of the elements to connect: i.e., {start: "#purple", end: "#green"}.
       // Optional properties:
