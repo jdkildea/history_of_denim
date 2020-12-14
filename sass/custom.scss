@@ -27,12 +27,14 @@ body {
         position: fixed;
         z-index: 5;
         width: 70%;
+        height: 56;
         box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.2);
-        z-index: 6;
+        z-index: 101;
     }
 
     ul.navbar-nav li.dropdown:hover .myddmenu {
         display: block;
+        z-index: 100;
     }
 
     .myddmenu {
@@ -43,6 +45,7 @@ body {
 
     .myddmenu a:hover {
         background-color: #ddd;
+        z-index: 100;
     }
 
     .navblur::after{
@@ -72,6 +75,12 @@ body {
     .mycarcaption {
         // color: #144A9B;
         margin: 20px;
+    }
+
+    #aoi {
+        max-width: 600px;
+        margin: auto;
+        height: 1000vh;
     }
 // end carousel ---------^
 
@@ -234,22 +243,18 @@ body {
         overflow: visible;
     }
 
-    .connecting-line {
-        box-shadow: 0px 0px 5px $accentlight;
-        z-index: -1;
-    }
-
     .explore-title {
-        line-height: 100px;
-        margin: 20px auto 0px;
+        line-height: auto;
+        margin: 70px auto 50px;
+        text-align: center;
 
     }
 
     .explore-row {
-        margin: 0px !important;
+        margin: 0px 0px 30px!important;
     }
 
-    .myaccordian {
+    .myaccordion {
         width: 100px;
         height: 100px;
     }
@@ -259,9 +264,7 @@ body {
         height: 20px;
         border-radius: 50%;
         position: absolute;
-        top: 50px;
-        left: 50px;
-        z-index: 100;
+        z-index: 50;
         display: inline-block;
         border: none;
         transition: .3s ease-in-out;
@@ -282,85 +285,72 @@ body {
         padding: 0 1rem;
     }
 
-    .explore-imgs span, img {
-        width: 50vw;
-        max-width: 400px;
-        height: auto;
-        max-height: 450px;
+    .explore-imgs span {
         position: absolute;
         box-shadow: $myshadow;
         border-radius: $smallbr;
 
-        &img {
+        & img {
             width: 100%;
             height: auto;
         }
 
+        width: 50vw;
+        max-width: 400px;
+        height: auto;
+
         &:nth-child(1) {
             z-index:2;
 
+            &:hover {
+                z-index: 4
+            }
         }
 
-        &:nth-child(2), :nth-child(2) img {
+        &:nth-child(2) {
             z-index:3;
             left: 20vw;
             top: 100px;
 
-            // &::before {
-            //     content: ' ';
-            //     width: 20px;
-            //     height: 20px;
-            //     border-radius: 50%;
-            //     position: absolute;
-            //     top: 200px;
-            //     left: 100px;
-            //     z-index: 6;
-            //     background-image: $dotgrad;
-            //     display: inline-block;
-            //     transition: .3s ease-in-out;
-
-            //     background-image: $dotgrad;
-            //     box-shadow: 0px 0px 5px $accentlight;
-            // }
-
-            // &:hover:before {
-            //     scale: 1.5;
-            //     box-shadow: 1px 1px 4px $accentlight;
-            //     transition: .3s ease-in-out;
-            // }
+            &:hover {
+                z-index: 4;
+            }
         }
+
+        // position images when there's only 2 images ------v
+            &:nth-child(1):nth-last-child(2){
+                left: 10vw !important;
+            }
+
+            &:nth-child(1):nth-last-child(2) ~ span{
+                left: 40vw !important;
+                top: 100px;
+            }
+        //--------------^
 
         &:nth-child(3) {
             right: 3vw;
             top: 50px;
 
-            &.dot {
-                position: absolute;
-                top: 50px !important;
-                right: 100px;
+            &:hover {
+                z-index: 4
             }
-
-            // &::before {
-            //     content: ' ';
-            //     width: 20px;
-            //     height: 20px;
-            //     border-radius: 50%;
-                
-            //     z-index: 5;
-            //     background-image: $dotgrad;
-            //     display: inline-block;
-            //     transition: .3s ease-in-out;
-
-            //     background-image: $dotgrad;
-            //     box-shadow: 0px 0px 5px $accentlight;
-            // }
-
-            // &:hover:before {
-            //     scale: 1.5;
-            //     box-shadow: 1px 1px 4px $accentlight;
-            //     transition: .3s ease-in-out;
-            // }
         }
+    }
+
+    #img1 .dot {
+        top: 10vh;
+        left: 5vw;
+    }
+
+    #img2 .dot {
+        top: 20vh;
+        left: 10vw;
+    }
+
+    #img3 .dot {
+        top: 25vh;
+        right: 10vw;
     }
 
     .png-noshadow {
@@ -378,8 +368,8 @@ body {
         height: auto;
         background-color: #F8F9FA;
         box-shadow: $myshadow;
-        padding: 1rem;
-        margin-top: 20px;
+        padding: 0px 1rem;
+        // margin: 20px 0px 20vh;
         border-radius: $smallbr;
 
         &#info1::before {
@@ -387,18 +377,20 @@ body {
             z-index: -1;
             background-color: $accent;
             position: absolute;
-            // left:0px;
-            // top: 0px;
-            height: 70vh;
+            height: 40vh;
             width: 300px;
             box-shadow: $myshadow;
-            margin: auto;
+            margin: 20px 0px 50px 20px;
             border-radius: $smallbr;   
         }
     }
 
+    .show {
+        padding: 1rem;
+    }
+
     .more-resources {
-        width: 90%
+        margin-top: 70px;
     }
 
 // end explore_pages ---------->
