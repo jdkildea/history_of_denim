@@ -63,24 +63,41 @@ body {
 // start carousel -------v
     .mycarousel {
         height: 90vh;
-        padding: 7vh 0;
+        padding: 10vh 0;
+
+        & img {
+            width: auto !important;
+            max-height: 70vh !important;
+            margin: auto auto 50px;
+        }
+
+        & a {
+            color: #fff;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 
-    .mycarousel img {
-        width: auto !important;
-        max-height: 80vh !important;
-        margin: auto;
-    }
+    .mycarousel 
+    
 
     .mycarcaption {
         // color: #144A9B;
-        margin: 20px;
+        margin: 50px 0px 0px;
+        padding: 0px;
+    }
+
+    .iframe-container {
+        max-width: 80vw;
+        margin: auto;
     }
 
     #aoi {
-        max-width: 600px;
+        width: 100%;
         margin: auto;
-        height: 1000vh;
+        padding: 150px;
     }
 // end carousel ---------^
 
@@ -229,7 +246,7 @@ body {
 
     .abtcontainer {
         width: 100%;
-        height: 500px;
+        height: auto;
         border-radius: 25px;
         background-color: #fff;
         margin: 50px 0px;
@@ -238,16 +255,10 @@ body {
 
 // start explore_pages ---------->
 
-    #svgContainer {
-        position: absolute;
-        overflow: visible;
-    }
-
     .explore-title {
         line-height: auto;
         margin: 70px auto 50px;
         text-align: center;
-
     }
 
     .explore-row {
@@ -279,6 +290,8 @@ body {
         }
     }
 
+    // explore-imgs container
+
     .explore-imgs {
         width: 100%;
         height: 70vh;
@@ -287,12 +300,14 @@ body {
 
     .explore-imgs span {
         position: absolute;
-        box-shadow: $myshadow;
         border-radius: $smallbr;
 
         & img {
             width: 100%;
             height: auto;
+            scale: 1;
+            transition: .3s ease-in-out;
+            box-shadow: $myshadow;
         }
 
         width: 50vw;
@@ -310,7 +325,7 @@ body {
         &:nth-child(2) {
             z-index:3;
             left: 20vw;
-            top: 100px;
+            top: 50px;
 
             &:hover {
                 z-index: 4;
@@ -324,13 +339,13 @@ body {
 
             &:nth-child(1):nth-last-child(2) ~ span{
                 left: 40vw !important;
-                top: 100px;
+                top: 50px;
             }
         //--------------^
 
         &:nth-child(3) {
             right: 3vw;
-            top: 50px;
+            top: 30px;
 
             &:hover {
                 z-index: 4
@@ -369,10 +384,9 @@ body {
         background-color: #F8F9FA;
         box-shadow: $myshadow;
         padding: 0px 1rem;
-        // margin: 20px 0px 20vh;
         border-radius: $smallbr;
 
-        &#info1::before {
+        &#infoinit::before {
             content: "";
             z-index: -1;
             background-color: $accent;
